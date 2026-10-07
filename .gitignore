@@ -1,0 +1,25 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Local credentials and generated configuration
+.env
+.env.*
+!.env.example
+**/profiles.yml
+**/.user.yml
+airflow/config/airflow.cfg
+
+# Generated dbt and Airflow artifacts
+logs/
+target/
+**/target/
+**/dbt_packages/
+**/logs/

@@ -1,0 +1,4 @@
+{
+    "dbt.dbtIntegration": "core",
+    "dbt.dbtPythonPathOverride": "C:\\Users\\akans\\data_project_DBT\\.venv\\Scripts\\python.exe"
+}
