@@ -1,4 +1,4 @@
-# Databricks <> DBT <> End-to-End <> Project
+# Databricks <> DBT <> Apache Airflow <> Docker <> End-to-End <> Project
 
 An end-to-end analytics pipeline that coordinates CDC ingestion in Databricks
 with layered dbt transformations and quality checks orchestrated by Apache
@@ -10,6 +10,9 @@ The pipeline loads changes into a Databricks bronze layer, then builds
 incremental technical silver tables, a business-oriented silver model, and
 gold analytics models. Airflow coordinates the steps and stops downstream
 work when ingestion or a dbt test fails.
+
+<img width="839" height="253" alt="Screenshot 2026-09-07 223007" src="https://github.com/user-attachments/assets/17e74f4e-d718-459e-abc6-d971f93c3f85" />
+
 
 ## Flow architecture
 
