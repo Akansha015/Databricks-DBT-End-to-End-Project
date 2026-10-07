@@ -69,26 +69,14 @@ order items, stores, and employees.
 
 ## Configuration and credentials
 
-Do not commit credentials or generated local configuration. Supply
-`DATABRICKS_HOST` and `DATABRICKS_TOKEN` through the Airflow environment (for
-local Compose use, add them to an untracked `airflow/.env` file). The Databricks
-SDK reads these standard environment variables when `WorkspaceClient()` is
-created.
-
-Configure a local dbt `profiles.yml` for the Databricks workspace and warehouse
+Configured a local dbt `profiles.yml` for the Databricks workspace and warehouse
 before running dbt commands. The profile is intentionally excluded from Git.
-The Airflow project also requires its local Airflow configuration; the
-generated `airflow/config/airflow.cfg` is excluded.
 
 ## Running locally
 
-From `airflow/`, configure the local environment and dbt profile, then start the
+From `airflow/`, configured the local environment and dbt profile, then start the
 Airflow services with Docker Compose:
 
 ```sh
 docker compose up --build
 ```
-
-Open the Airflow UI at `http://localhost:8080` and trigger the `orchestrate`
-DAG. Ensure the referenced Databricks job and required bronze tables are
-available before triggering it.
